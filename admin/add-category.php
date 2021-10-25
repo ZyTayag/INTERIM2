@@ -38,6 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <input type="text" name="category-name" id="category-name"> <br><br>
             <input type="submit" value="Submit" class="button green">
         </form>
+        <br>
+        <a href="admin-dashboard.php">Go back to dashboard</a>
     </div>
 </body>
 
