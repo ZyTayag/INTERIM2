@@ -18,6 +18,7 @@ html, body {
 
 .navbar .row span, .navbar .row a {
   color: white;
+  text-decoration: none;
 }
 
 .container {
@@ -26,10 +27,6 @@ html, body {
   padding: 20px;
   border: 1px solid rgb(143, 143, 143);
   border-radius: 10px;
-}
-
-.search-container {
-  display: none;
 }
 
 .row {
@@ -59,6 +56,10 @@ span.heading {
   font-size: 24px;
 }
 
+input[type=text], input[type=password] {
+  padding: 10px 20px;
+}
+
 .button {
   border: none;
   border-radius: 5px;
@@ -73,6 +74,14 @@ span.heading {
 
 .button:active {
   filter: brightness(0.7);
+}
+
+.button.white {
+  background-color: white;
+}
+
+a.button.white{
+  color: black;
 }
 
 .button.green {
