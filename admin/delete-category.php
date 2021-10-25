@@ -4,12 +4,16 @@ include("../connection.php");
 include("../functions.php");
 
 $id = trim($_GET["id"]);
-$query = "SELECT * FROM food_categories WHERE id = '$id'";
+$query = "SELECT * FROM food_categories WHERE id = $id";
 $result = mysqli_query($con, $query);
 
 if ($result) {
-    $row = mysqli_fetch_array($result);
-    $category_name = $row['category_name'];
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+        $category_id = $row['id'];
+    } else {
+        die("This category does not exist.");
+    }
 }
 ?>
 
@@ -48,7 +52,6 @@ if ($result) {
                 }
 
                 if (mysqli_num_rows($result) > 0) {
-
                     echo "<table>";
                     echo "<thead>";
                     echo "<tr>";

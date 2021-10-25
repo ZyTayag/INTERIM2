@@ -38,7 +38,7 @@ include("../functions.php");
                     echo "<thead>";
                     echo "<tr>";
                     echo "<th>Category Name</th>";
-                    echo "<th>Action</th>";
+                    echo "<th>Actions</th>";
                     echo "</tr>";
                     echo "</thead>";
                     echo "<tbody>";
