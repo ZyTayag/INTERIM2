@@ -17,7 +17,7 @@ if ($result) {
 <html lang="en">
 
 <head>
-    <title><?php echo $category_name . ' ' ?> - Food Item</title>
+    <title><?php echo $category_name . ' ' ?> - Food Items</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -26,7 +26,7 @@ if ($result) {
         <div class="row">
             <span class="heading"><a href="admin-dashboard.php">Food Ordering System</a></span>
             <div>
-                <a href="logout.php">Log Out</a>
+                <a href="../logout.php">Log Out</a>
             </div>
         </div>
     </div>
@@ -37,7 +37,38 @@ if ($result) {
         </div>
         <hr>
         <div class="row">
-            <?php selectAllFoodItems($con); ?>
+            <?php
+            $query = "SELECT * FROM food_items WHERE category_id = $id";
+            $result = mysqli_query($con, $query);
+
+            if ($result) {
+                if (mysqli_num_rows($result) > 0) {
+                    echo "<table>";
+                    echo "<thead>";
+                    echo "<tr>";
+                    echo "<th>Item Name</th>";
+                    echo "<th>Price (Php)</th>";
+                    echo "<th>Action</th>";
+                    echo "</tr>";
+                    echo "</thead>";
+                    echo "<tbody>";
+                    while ($row = mysqli_fetch_array($result)) { //generate rows
+                        echo "<tr>";
+                        echo "<td>" . $row['item_name'] . "</td>";
+                        echo "<td>" . $row['price'] . "</td>";
+                        echo "<td>";
+                        echo '<a href="update-item.php?id=' . $row['id'] . '" class="button blue">Update Item</a>';
+                        echo '<a href="delete-item.php?id=' . $row['id'] . '" class="button red">Delete</a>';
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                    echo  "</tbody>";
+                    echo "</table>";
+                } else {
+                    echo '<div class="alert red"><span>There are no food items available.</span></div>';
+                }
+            }
+            ?>
         </div>
     </div>
 </body>
