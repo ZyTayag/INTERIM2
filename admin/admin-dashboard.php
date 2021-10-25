@@ -28,26 +28,7 @@ include("../functions.php");
         </div>
         <hr>
         <div class="row">
-        <?php selectAllCategories($con); ?>
-            <!-- placeholder only -->
-            <!-- <table>
-                <thead>
-                    <tr>
-                        <th>Category Name</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Breakfast</td>
-                        <td>
-                            <a href="food-items.php" class="button blue">See all items</a>
-                            <a href="delete-category.php" class="button red">Delete</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table> -->
-            <!-- placeholder only -->
+            <?php selectAllCategories($con); ?>
         </div>
     </div>
 </body>

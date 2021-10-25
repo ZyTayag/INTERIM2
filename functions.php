@@ -46,7 +46,21 @@ function selectAllCategories($con)
     }
 }
 
+function categoriesDropdown($con)
+{
+    $query = "SELECT * FROM food_categories";
+    $result = mysqli_query($con, $query);
 
+    if ($result) {
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_array($result)) { //generate options
+
+            }
+        } else {
+            echo 'no categories available';
+        }
+    }
+}
 
 function selectAllFoodItems($con)
 {
@@ -55,10 +69,10 @@ function selectAllFoodItems($con)
 
     if ($result) {
         if (mysqli_num_rows($result) > 0) {
+            echo "<table>";
             echo "<thead>";
             echo "<tr>";
             echo "<th>Item Name</th>";
-            echo "<th>Category</th>";
             echo "<th>Price (Php)</th>";
             echo "<th>Action</th>";
             echo "</tr>";
@@ -67,7 +81,6 @@ function selectAllFoodItems($con)
             while ($row = mysqli_fetch_array($result)) { //generate rows
                 echo "<tr>";
                 echo "<td>" . $row['item_name'] . "</td>";
-                echo "<td>" . $row['category_id'] . "</td>";
                 echo "<td>" . $row['price'] . "</td>";
                 echo "<td>";
                 echo '<a href="update.php?id=' . $row['id'] . '" class="button blue">Add to Cart</a>';

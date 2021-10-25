@@ -57,7 +57,7 @@ include("functions.php");
                     <td>Chicken</td>
                     <td>Breakfast</td>
                     <td>50</td>
-                    <td><a href="customer/setOrder.php" class="button blue">Add to Cart</a></td>
+                    <td><a href="customer/set-order.php" class="button blue">Order</a></td>
                 </tr>
             </tbody>
         </table>
