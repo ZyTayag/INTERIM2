@@ -49,8 +49,8 @@ if ($result) {
             $price = $_POST['item-price'];
             $category = $id;
 
-            if (!empty($name) && !empty($price) && is_numeric($price)) {
-                $query = "INSERT INTO food_items (item_name, category_id, price) VALUES ('$name', '$category', '$price')";         
+            if (!empty($name) && !empty($price) && !is_numeric($name) && is_numeric($price)) {
+                $query = "INSERT INTO food_items (item_name, category_id, price) VALUES ('$name', '$category', '$price')";
                 mysqli_query($con, $query);
                 header("Location: food-items.php?id=$id");
                 die;
