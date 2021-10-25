@@ -2,15 +2,6 @@
 session_start();
 include("../connection.php");
 include("../functions.php");
-
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $category_name = $_POST['category-name'];
-    $query = "INSERT INTO food_categories (category_name) VALUES ('$category_name')";
-    mysqli_query($con, $query);
-    header("Location: admin-dashboard.php");
-    die;
-}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <div class="row">
             <span class="heading"><a href="admin-dashboard.php">Food Ordering System</a></span>
             <div>
-                <a href="logout.php">Log Out</a>
+                <a href="../logout.php">Log Out</a>
             </div>
         </div>
     </div>
@@ -38,6 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <input type="text" name="category-name" id="category-name"> <br><br>
             <input type="submit" value="Submit" class="button green">
         </form>
+        <br>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            $category_name = $_POST['category-name'];
+            if (!empty($category_name) && !is_numeric($category_name)) {
+                $query = "INSERT INTO food_categories (category_name) VALUES ('$category_name')";
+                mysqli_query($con, $query);
+                header("Location: admin-dashboard.php");
+                die;
+            } else {
+                echo '<div class="alert red"><span>Please enter valid complete information.</span></div>';
+            }
+        }
+        ?>
+        <a href="admin-dashboard.php">Go back to dashboard</a>
     </div>
 </body>
 
