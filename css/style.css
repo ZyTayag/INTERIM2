@@ -1,0 +1,107 @@
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(206, 79, 79);
+ 
+}
+
+.navbar .row {
+  padding: 20px;
+  margin: 0;
+  align-items: center;
+}
+
+.navbar .row span, .navbar .row a {
+  color: white;
+}
+
+.container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 10px;
+}
+
+.search-container {
+  display: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 16px auto;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 20px 0 20px 10px;
+}
+
+span.heading {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+.button:active {
+  filter: brightness(0.7);
+}
+
+.button.green {
+  background-color: rgb(0, 170, 105);
+}
+
+.button.blue {
+  background-color: rgb(28, 83, 165);
+}
+
+.button.red {
+  background-color: rgb(216, 70, 70);
+}
+
+.alert {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.alert.red {
+  background-color: rgb(255, 204, 204);
+}
+
+.alert.green {
+  background-color: rgb(192, 238, 192);
+}
+
+.alert span {
+  margin-left: 20px;
+}
