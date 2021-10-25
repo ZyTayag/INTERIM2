@@ -90,6 +90,7 @@ a.button.white{
 
 .button.blue {
   background-color: rgb(28, 83, 165);
+  margin-right: 10px;
 }
 
 .button.red {

@@ -27,10 +27,10 @@ include("../functions.php");
             <a href="add-category.php" class="button green">Add Food Category</a>
         </div>
         <hr>
-
         <div class="row">
+        <?php selectAllCategories($con); ?>
             <!-- placeholder only -->
-            <table>
+            <!-- <table>
                 <thead>
                     <tr>
                         <th>Category Name</th>
@@ -46,7 +46,7 @@ include("../functions.php");
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table> -->
             <!-- placeholder only -->
         </div>
     </div>
