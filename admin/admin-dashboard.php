@@ -46,7 +46,7 @@ include("../functions.php");
                         echo "<tr>";
                         echo "<td>" . $row['category_name'] . "</td>";
                         echo "<td>";
-                        echo '<a href="food-items.php?id=' . $row['id'] . '" class="button blue">See All Items</a>';
+                        echo '<a href="food-items.php?id=' . $row['id'] . '" class="button blue">See All Food Items</a>';
                         echo '<a href="delete-category.php?id=' . $row['id'] . '" class="button red">Delete</a>';
                         echo "</td>";
                         echo "</tr>";

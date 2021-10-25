@@ -70,6 +70,7 @@ if ($result) {
             }
             ?>
         </div>
+        <a href="admin-dashboard.php">Go back to dashboard</a>
     </div>
 </body>
 
