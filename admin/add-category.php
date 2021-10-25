@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <div class="row">
             <span class="heading"><a href="admin-dashboard.php">Food Ordering System</a></span>
             <div>
-                <a href="logout.php">Log Out</a>
+                <a href="../logout.php">Log Out</a>
             </div>
         </div>
     </div>
