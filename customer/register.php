@@ -17,20 +17,23 @@
         </div>
     </div>
 
-    <div class="container">
-        <span class="heading">Customer Registration</span>
-        <hr>
+    <form action="insert.php" method="POST">
+        <div class="container">
+            <span class="heading">Customer Registration</span>
+            <hr>
+            
+            <label for="user_name">User Name:</label> <br>
+            <input id="user_name" type="text" name="user_name" required><br><br>
 
-        <label for="user_name">User Name:</label> <br>
-        <input id="user_name" type="text" name="user_name"><br><br>
+            <label for="password">Password:</label> <br>
+            <input id="password" type="password" name="password" required><br><br>
 
-        <label for="password">Password:</label> <br>
-        <input id="password" type="password" name="password"><br><br>
-
-        <input id="button" type="submit" value="Register" class="button green"><br><br>
-
-        <a href="login.php">Click to Log In</a>
-    </div>
+            <input id="button" type="submit" value="Register" class="button green"><br><br>
+            
+            <a href="login.php">Click to Log In</a>
+        
+        </div>
+    </form>
 </body>
 
 </html>
