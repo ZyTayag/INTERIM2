@@ -23,10 +23,10 @@
             <hr>
             
             <label for="user_name">User Name:</label> <br>
-            <input id="user_name" type="text" name="user_name" required><br><br>
+            <input id="user_name" type="text" name="user_name"><br><br>
 
             <label for="password">Password:</label> <br>
-            <input id="password" type="password" name="password" required><br><br>
+            <input id="password" type="password" name="password"><br><br>
 
             <input id="button" type="submit" value="Register" class="button green"><br><br>
             
